@@ -1,15 +1,8 @@
 /// <reference path="../../../reference.ts" />
-var tsmodule = require('../common/tsmodule/tsmodule');
-function start() {
-    var $ = require("jquery");
-    $(function () {
-        console.log('---------');
-        console.log('dom ready');
-    });
-    var newJs = require('newJs');
-    newJs.newJsFunction("what newjs");
-    console.log('---------');
-    tsmodule.tsmoduleFunction("what ts");
+var houseFile = require('../common/tsmodule/house');
+function createHouse(door) {
+    var house = new houseFile.House(door);
+    house.build();
 }
-exports.start = start;
+exports.createHouse = createHouse;
 //# sourceMappingURL=app.js.map

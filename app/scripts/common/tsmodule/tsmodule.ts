@@ -1,7 +1,8 @@
 /// <reference path="../../../../reference.ts" />
-import dependency = require("../../1/tsmodule/tsmoduleDependency");
+import dependencyManager = require("../../dependencymanager");
 
 export function tsmoduleFunction(what:string) {
     console.log("tsmoduleFunction called");
+    var dependency = dependencyManager.types.tsmoduleDependency;
     dependency.sayIt(what);
 }

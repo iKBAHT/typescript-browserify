@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+  // TODO: generate this aliases automatically from json config file
   var
     commonAliases = [
       "./app/scripts/common/jsmodule/newJs.js:newJs"

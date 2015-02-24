@@ -1,19 +1,9 @@
 /// <reference path="../../../reference.ts" />
 
-import tsmodule = require('../common/tsmodule/tsmodule');
+import houseFile = require('tsmodule/house');
 
-export function start() {
-
-    var $ = require("jquery");
-    $(function () {
-        console.log('---------');
-        console.log('dom ready');
-    });
-
-    var newJs = require('newJs');
-    newJs.newJsFunction("what newjs");
-
-    console.log('---------');
-
-    tsmodule.tsmoduleFunction("what ts");
+export function createHouse(door) {
+    var house = new houseFile.House(door);
+    house.build();
+    house.addElevator();
 }
