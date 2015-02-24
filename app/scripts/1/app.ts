@@ -1,15 +1,19 @@
-/// <reference path="../../reference.ts" />
+/// <reference path="../../../reference.ts" />
 
-import tsmodule = require('tsmodule/tsmodule');
+import tsmodule = require('../common/tsmodule/tsmodule');
 
 export function start() {
 
     var $ = require("jquery");
     $(function () {
-        $('body').append('hello world');
+        console.log('---------');
+        console.log('dom ready');
     });
 
     var newJs = require('newJs');
     newJs.newJsFunction("what newjs");
+
+    console.log('---------');
+
     tsmodule.tsmoduleFunction("what ts");
 }
